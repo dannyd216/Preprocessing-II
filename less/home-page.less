@@ -1,24 +1,18 @@
-header {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  justify-content: space-between;
-  border-bottom: dashed 1px grey;
-}
-
-
-.funBusDiv {
-  width: 100%;
-}
-
-#welcomeBus {
-  width: 100%;
-  border-bottom: 2px grey dotted;
-}
-
-
-
 .home {
+  @media @mobile {
+    width: 90%;
+  }
+
+  #main-header {
+    h2 {
+      margin-top: 20px;
+    }
+
+    p {
+      padding-bottom: 20px;
+      border-bottom: 2px dashed @navigation-border;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -26,20 +20,33 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 
-
-
+    @media @mobile {
+      flex-direction: column;
+    }
 
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -48,8 +55,8 @@ header {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
-    @media mobile {
-      flex-direction: column;
+    @media @mobile {
+      flex-direction: column-reverse;
     }
 
     .text-content {
@@ -91,26 +98,17 @@ header {
       width: 30%;
       margin-bottom: 30px;
 
-      @medi @mobile {
+      @media @mobile {
         width: 75%;
       }
 
+      button {
+        .buttonStyles(@main-bg, @button-bg, @font-color);
 
-      //CLASS BTN
-      .btn {
-        background-color: @eastern-blue;
-        font-size: 30px;
-        color: white;
-        border-radius: 20px;
-        text-align: center;
-        padding: 2%;
+        @media @mobile {
+          width: 100%;
+        }
       }
-
-      @media @mobile {
-        width: 100%;
-      }
-
-
     }
   }
 }

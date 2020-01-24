@@ -1,17 +1,9 @@
-// Navigation Styles here
-
-
-
-//NAV STYLE
-nav {
-    border: 1px red solid;
-
+header {
     display: flex;
-    padding: 3%;
-    margin: 1%;
-    width: 70%;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 25px 0;
 
     @media @mobile {
         flex-direction: column;
@@ -20,26 +12,27 @@ nav {
     }
 
     h1 {
-        font-size: 3.1rem;
+        @media @mobile {
+            font-size: 3.1rem;
+        }
     }
-}
 
-// # {
-//     width: 20%;
-//     border: 1px pink solid;
-// }
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        width: 335px;
+        padding-right: 15px;
+        font-size: 1.6rem;
 
-nav a {
-    width: 70%;
-    text-decoration: none;
-    color: black;
-    justify-content: space-around;
-    width: 335px;
-    font-size: 1.6rem;
+        @media @mobile {
+            margin-top: 15px;
+            justify-content: space-between;
+            width: 85%;
+        }
 
-    @media @mobile {
-        margin-top: 15px;
-        justify-content: space-between;
-        width: 85%;
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 }
